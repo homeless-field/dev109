@@ -8,6 +8,12 @@
         "HTML and CSS: Design and Build Websites"
     -->
     <title>Text</title>
+    <meta name="description" content="This is a 155-character description of the page">
+    <meta name="keywords" content="commaseperated, keywords, are, not, useful, anymore">
+    <meta name="robots" content="noindex"> <!-- noindex means it shouldn't be crawled. no-follow means this should be the end of the link road -->
+    <meta http-equiv="author" content="Ashton Gibson">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="Fri, 04 Apr 2014 23:59:59 GMT">
 </head>
 <body>
     <!-- Tags and markup -->
@@ -112,5 +118,93 @@
              alt="Zucchini Cake"
              title="Zucchini Cake No Frosting">
     </p>
+
+    <!-- Tables -->
+    <h1>Tables</h1>
+    <p>This is a well-made table</p>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Column A</th>
+                <th scope="col">Column B</th>
+                <th scope="col">Column C</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">1.5</td>
+                <td>2.5</td>
+            </tr>
+            <tr>
+                <td>1.5</td>
+                <td>1.0</td>
+                <td>0.5</td>
+            </tr>
+        </tbody>
+        
+    </table>
+
+    <p>This table should be using CSS instead</p>
+    <table width="400" cellpadding="10" cellspacing="5" border="2" bgcolor="#efefef">
+        <thead>
+            <tr>
+                <th scope="col">Column A</th>
+                <th scope="col">Column B</th>
+                <th scope="col" width="150">Column C</th>
+            </tr>
+        </thead>
+        <tr>
+            <td colspan="2">1.5</td>
+            <td>2.5</td>
+        </tr>
+        <tr>
+            <td>1.5</td>
+            <td>1.0</td>
+            <td>0.5</td>
+        </tr>
+    </table>
+
+    <!-- Forms -->
+    <h1>Forms</h1>
+    <p>
+        Forms require an action attribute, a URL that information will be sent to when the form is submitted.
+        They also need a method attribute. In a get method, information will be added directly to the action URL. This is insecure and inefficient for large data.
+        In a post method, information is sent in an HTTP header. This is more secure and allows large data.
+    </p>
+    <form action = "">
+        <fieldset>
+            <legend>Account</legend>
+            <label>Username: <input type="text" name="username" maxlength="32" required="required"></label>
+            <label>Password: <input type="password" name="password" maxlength="32" required="required"></label>
+            <label>Do you have any comments? <textarea name="comments" placeholder="Enter your comments..."></textarea></label>
+        </fieldset>
+        <label>Which music genre do you prefer?<br>
+            <label><input type="radio" name="genre" value="rock">Rock</label>
+            <label><input type="radio" name="genre" value="rap">Rap</label>
+            <label><input type="radio" name="genre" value="pop">Pop</label></label>
+        <label>Which music services do you use?<br>
+            <label><input type="checkbox" name="services" value="spotify">Spotify</label>
+            <label><input type="checkbox" name="services" value="ytmusic">YT Music</label>
+            <label><input type="checkbox" name="services" value="applemusic">Apple Music</label></label><br>
+        <label>Which device do you listen to music on?</label>
+        <select name="device">
+            <option value="PC">PC</option>
+            <option value="Mobile" selected="selected">Mobile</option>
+            <option value="Radio">Radio</option>
+        </select><br>
+        <label>Upload your favorite song in MP3 format:</label>
+        <input type="file" name="song"><br>
+        <button>Add</button><br> <!-- More useful with an "img" element with "src" attribute inside -->
+        <label>When did you first hear a song? <input type="date" name="firstsong"></label><br>
+        <label>Email: <input type="email" name="email"></label><br>
+        <label>Your Website: <input type="url" name="url"></label><br>
+        <label>Search: <input type="search" name="search" placeholder="Enter Search..."></label><br>
+
+        <input type="submit" name="submit" value="Submit Form"> <!-- type can also be "image" with an additional "src" attribute -->
+    </form>
+
+    <div id="unique" class="non-unique">
+        <p>Some text <span class="important">is cooler </span>than others</p>
+    </div>
 </body>
 </html>
