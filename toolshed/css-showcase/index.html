@@ -9,9 +9,10 @@
 <body>
     <h1>CSS</h1>
     <div id="divs" class="divbasic">
-        <p>Anything can go in a div, <span id="span">but only inline elements go in a span.</span></p>
-        <p>IDs are unique, and each element can only have one. Classes are non-unique, and elements can have infinitely many.</p>
+        <p>Anything can go in a div, <span id="span">but only inline elements go in a span.</span> IDs are unique, and each element can only have one. Classes are non-unique, and elements can have infinitely many.</p>
     </div>
+
+    <!-- PARTS -->
     <div id="css" class="divbasic">
         <p>CSS has two parts:</p>
         <ul>
@@ -36,24 +37,46 @@
                 </ul>
             </li>
         </ul>
+    </div>
+
+    <!-- SOME MORE EXPLANATION -->
+    <div class="divbasic">
+        <p>
+            Pseudo-elements can be added to the end of a selector and will only affect it if it applies.<br>
+            <span class="codeblock">p:first-letter</span><br>
+            <span class="codeblock">p:first-line</span><br>
+            <span class="codeblock">a:link</span> (unclicked)<br>
+            <span class="codeblock">a:visited</span> (click)<br>
+            <span class="codeblock">p:hover</span><br>
+            <span class="codeblock">p:active</span> (actively clicked into)<br>
+            <span class="codeblock">input:focus</span> (actively being interacted with)
+        </p>
+        <p>
+            There is also <span class="codeblock">@font-face</span> which can be used at the same level as a selector to install a new font to the user's machine:<br>
+            <span class="codeblock">@font-face {</span><br>
+            <span class="codeblock">font-family: "ChuckFiveRegular"</span><br>
+            <span class="codeblock">source: url('...')</span>
+        </p>
+
         <p>CSS can be defined externally, internally, or inline.</p>
         <ul>
             <li><p>
                 <strong>External: </strong>Include the following in the <span class="codeblock">&#60;head&#62;</span> section:<br />
-                <span class="codeblock">&#60;link rel="stylesheet" href="styles.css“ type=“text/css”&#62;</span>
+                <span class="codeblock">&#60;link rel="stylesheet" href="styles.css" type="text/css"&#62;</span>
             </p></li>
             <li><p>
                 <strong>Internal: </strong>Include the following in the <span class="codeblock">&#60;head&#62;</span> section:<br />
-                <span class="codeblock">&#60;style type=“text/css”&#62; h1 {color:red;}  p {color:blue;}&#60;/style&#62;</span>
+                <span class="codeblock">&#60;style type="text/css"&#62; h1 {color:red;}  p {color:blue;}&#60;/style&#62;</span>
             </p></li>
             <li><p>
                 <strong>Inline: </strong>Include the following directly surrounding the element:<br />
-                <span class="codeblock">&#60;p style=“color:blue”&#62;  THIS IS AN INLINE STYLE IN BLUE &#60;/p&#62;</span>
+                <span class="codeblock">&#60;p style="color:blue"&#62;  THIS IS AN INLINE STYLE IN BLUE &#60;/p&#62;</span>
             </p></li>
         </ul>
     </div>
+
+    <!-- ALL PROPERTIES -->
     <div>
-        <h1>All Property/Value Pairs Discussed: </h1>
         <table id="allproperties">
             <thead>
                 <tr>
@@ -73,7 +96,7 @@
                             <li><p>hsla(0,100%, 100%,0.5)</p></li>
                         </ul>
                     </td>
-                    <td><p class="pbasic">Sets the color of text</p></td>
+                    <td>Sets the color of text</td>
                 </tr>
                 <tr>
                     <td><p>background-color</p></td>
@@ -85,7 +108,7 @@
                             <li><p>hsla(0,100%, 100%,0.5)</p></li>
                         </ul>
                     </td>
-                    <td><p class="pbasic">Sets the background color, but not text</p></td>
+                    <td>Sets the background color, but not text</td>
                 </tr>
                 <tr>
                     <td><p>opacity</p></td>
@@ -95,7 +118,163 @@
                             <li><p>0.14</p></li>
                         </ul>
                     </td>
-                    <td><p class="pbasic">Sets the opacity, effects children</p></td>
+                    <td>Sets the opacity, affects children</td>
+                </tr>
+                <tr>
+                    <td><p>font-family</p></td>
+                    <td>
+                        <ul>
+                            <li><p>Georgia, Times, serif</p></li>
+                            <li><p>"Courier New", Courier, monospace</p></li>
+                        </ul>
+                    </td>
+                    <td>Sets which font to use. If a font can't be found it'll try the next in the list.
+                        Fonts with multiple-word titles should be in double quotes</td>
+                </tr>
+                <tr>
+                    <td><p>font-size</p></td>
+                    <td>
+                        <ul>
+                            <li><p>12px</p></li>
+                            <li><p>200%</p></li>
+                            <li><p>1.3em</p></li>
+                        </ul>
+                    </td>
+                    <td>Sets the size of font</td>
+                </tr>
+                <tr>
+                    <td><p>font-weight</p></td>
+                    <td>
+                        <ul>
+                            <li><p>normal</p></li>
+                            <li><p>bold</p></li>
+                        </ul>
+                    </td>
+                    <td>Allows bold text</td>
+                </tr>
+                <tr>
+                    <td><p>font-style</p></td>
+                    <td>
+                        <ul>
+                            <li><p>normal</p></li>
+                            <li><p>italic</p></li>
+                            <li><p>oblique</p></li>
+                        </ul>
+                    </td>
+                    <td>Allows italic text</td>
+                </tr>
+                <tr>
+                    <td><p>text-transform</p></td>
+                    <td>
+                        <ul>
+                            <li><p>uppercase</p></li>
+                            <li><p>lowercase</p></li>
+                            <li><p>capitalize</p></li>
+                        </ul>
+                    </td>
+                    <td>Changes the capitalization of text</td>
+                </tr>
+                <tr>
+                    <td><p>text-indent</p></td>
+                    <td>
+                        <ul>
+                            <li><p>12px</p></li>
+                            <li><p>200%</p></li>
+                            <li><p>-1.3em</p></li>
+                        </ul>
+                    </td>
+                    <td>Indents the first line of text</td>
+                </tr>
+                <tr>
+                    <td><p>text-shadow</p></td>
+                    <td>
+                        <ul>
+                            <li><p>1px 2px</p></li>
+                            <li><p>10px 20px 1px #111111</p></li>
+                        </ul>
+                    </td>
+                    <td>Creates a drop shadow on text. Left-right, top-bottom, blur, color order. Only first 2 required</td>
+                </tr>
+                <tr>
+                    <td><p>width, height</p></td>
+                    <td>
+                        <ul>
+                            <li><p>12px</p></li>
+                            <li><p>200%</p></li>
+                        </ul>
+                    </td>
+                    <td>Defines width/height of the box</td>
+                </tr>
+                <tr>
+                    <td><p>min-width, max-height, max-width, max-height</p></td>
+                    <td>
+                        <ul>
+                            <li><p>12px</p></li>
+                            <li><p>200%</p></li>
+                        </ul>
+                    </td>
+                    <td>Defines min/max width/height when being resized</td>
+                </tr>
+                <tr>
+                    <td><p>overflow</p></td>
+                    <td>
+                        <ul>
+                            <li><p>hidden</p></li>
+                            <li><p>scroll</p></li>
+                        </ul>
+                    </td>
+                    <td>Defines what should be done if content is larger than the box itself</td>
+                </tr>
+                <tr>
+                    <td><p>border-width</p></td>
+                    <td>
+                        <ul>
+                            <li><p>12px</p></li>
+                            <li><p>thin</p></li>
+                            <li><p>medium</p></li>
+                            <li><p>thick</p></li>
+                        </ul>
+                    </td>
+                    <td>Controls width of border. Also supports border-top-width, border-left-width, etc.</td>
+                </tr>
+                <tr>
+                    <td><p>border-style</p></td>
+                    <td>
+                        <ul>
+                            <li><p>solid</p></li>
+                            <li><p>dotted</p></li>
+                            <li><p>dashed</p></li>
+                            <li><p>double</p></li>
+                            <li><p>groove</p></li>
+                            <li><p>ridge</p></li>
+                            <li><p>inset</p></li>
+                            <li><p>outset</p></li>
+                            <li><p>none</p></li>
+                        </ul>
+                    </td>
+                    <td>Controls style of border. Also supports border-top-style, border-left-style, etc.</td>
+                </tr>
+                <tr>
+                    <td><p>border-color</p></td>
+                    <td>
+                        <ul>
+                            <li><p>rgb(100,100,90)</p></li>
+                            <li><p>#ee8e30</p></li>
+                            <li><p>DarkCyan</p></li>
+                            <li><p>hsla(0,100%, 100%,0.5)</p></li>
+                        </ul>
+                    </td>
+                    <td>Sets the border color. Also supports border-top-color, border-left-color, etc.</td>
+                </tr>
+                <tr>
+                    <td><p>border</p></td>
+                    <td>
+                        <ul>
+                            <li><p>1px solid rgb(100,100,90)</p></li>
+                            <li><p>4px dashed grey</p></li>
+                        </ul>
+                    </td>
+                    <td>Allows to set border width, style, and color at once</td>
                 </tr>
                 <tr>
                     <td><p>padding</p></td>
@@ -105,7 +284,120 @@
                             <li><p>10px 20px 30px 40px</p></li>
                         </ul>
                     </td>
-                    <td><p class="pbasic">Separates content from element edges. Top, right, bottom, left order</p></td>
+                    <td>Separates content from element edges. Top, right, bottom, left order. Also supports padding-top, padding-left, etc.</td>
+                </tr>
+                <tr>
+                    <td><p>margin</p></td>
+                    <td>
+                        <ul>
+                            <li><p>1px</p></li>
+                            <li><p>10px 20px 30px 40px</p></li>
+                        </ul>
+                    </td>
+                    <td>Separates element from nearby elements. Top, right, bottom, left order. Also supports margin-top, margin-left, etc.</td>
+                </tr>
+                <tr>
+                    <td><p>display</p></td>
+                    <td>
+                        <ul>
+                            <li><p>inline</p></li>
+                            <li><p>block</p></li>
+                            <li><p>inline-block</p></li>
+                            <li><p>none</p></li>
+                        </ul>
+                    </td>
+                    <td>Converts between inline and block elements. Inline-block elements are blocks which act inline but support other block features. 
+                        None hides the element completely</td>
+                </tr>
+                <tr>
+                    <td><p>visibility</p></td>
+                    <td>
+                        <ul>
+                            <li><p>hidden</p></li>
+                            <li><p>visible</p></li>
+                        </ul>
+                    </td>
+                    <td>Hides the element, but leaves empty space where it should be</td>
+                </tr>
+                <tr>
+                    <td><p>list-style-type</p></td>
+                    <td>
+                        Unordered lists:
+                        <ul>
+                            <li><p>none</p></li>
+                            <li><p>disc</p></li>
+                            <li><p>circle</p></li>
+                            <li><p>square</p></li>
+                        </ul>
+                        Ordered lists:
+                        <ul>
+                            <li><p>decimal</p></li>
+                            <li><p>decimal-leading-zero</p></li>
+                            <li><p>lower-alpha</p></li>
+                            <li><p>upper-alpha</p></li>
+                            <li><p>lower-roman</p></li>
+                            <li><p>upper-roman</p></li>
+                        </ul>
+                    </td>
+                    <td>How to style any lists in the element</td>
+                </tr>
+                <tr>
+                    <td><p>list-style-image</p></td>
+                    <td>
+                        <ul>
+                            <li><p>url(...)</p></li>
+                        </ul>
+                    </td>
+                    <td>Specify an image to use rather than a bullet point</td>
+                </tr>
+                <tr>
+                    <td><p>list-style-position</p></td>
+                    <td>
+                        <ul>
+                            <li><p>outside</p></li>
+                            <li><p>inside</p></li>
+                        </ul>
+                    </td>
+                    <td>Whether the bullet should be inside or outside the box</td>
+                </tr>
+                <tr>
+                    <td><p>list-style</p></td>
+                    <td>
+                        <ul>
+                            <li><p>inside circle</p></li>
+                        </ul>
+                    </td>
+                    <td>Allows to set list style, image, and position at once</td>
+                </tr>
+                <tr>
+                    <td><p>empty-cells</p></td>
+                    <td>
+                        <ul>
+                            <li><p>show</p></li>
+                            <li><p>hide</p></li>
+                            <li><p>inherit</p></li>
+                        </ul>
+                    </td>
+                    <td>Whether empty table cells should show their borders</td>
+                </tr>
+                <tr>
+                    <td><p>border-spacing</p></td>
+                    <td>
+                        <ul>
+                            <li><p>2px</p></li>
+                        </ul>
+                    </td>
+                    <td>Set distance between table cells</td>
+                </tr>
+                <tr>
+                    <td><p>border-collapse</p></td>
+                    <td>
+                        <ul>
+                            <li><p>collapse</p></li>
+                            <li><p>separate</p></li>
+                        </ul>
+                    </td>
+                    <td>Whether adjacent table borders should be merged or stay seperate</td>
                 </tr>
             </tbody>
         </table>

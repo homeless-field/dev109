@@ -1,0 +1,31 @@
+.codeblock {
+    padding: 1px 3px 1px 3px;
+    background-color: #efefef;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.divbasic {
+    border: 1px dashed #d3d3d3;
+    text-indent: 20px;
+}
+
+#allproperties {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 75%;
+    border: 1px solid black;
+}
+
+#allproperties td {
+    border: 1px dashed #d3d3d3;
+}
+
+#allproperties p {
+    padding: 1px 3px 1px 3px;
+    background-color: #efefef;
+    font-family:'Courier New', Courier, monospace;
+}
+
+#allproperties h2 {
+    text-align: center;
+}
