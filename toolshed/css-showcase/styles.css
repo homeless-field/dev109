@@ -12,20 +12,23 @@
 #allproperties {
     margin-top: 60px;
     margin-bottom: 60px;
+}
+
+.codetable {
     width: 75%;
     border: 1px solid black;
 }
 
-#allproperties td {
+.codetable td {
     border: 1px dashed #d3d3d3;
 }
 
-#allproperties p {
+.codetable p {
     padding: 1px 3px 1px 3px;
     background-color: #efefef;
     font-family:'Courier New', Courier, monospace;
 }
 
-#allproperties h2 {
+.codetable h2 {
     text-align: center;
 }

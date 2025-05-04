@@ -58,7 +58,7 @@
             <span class="codeblock">source: url('...')</span>
         </p>
 
-        <p>CSS can be defined externally, internally, or inline.</p>
+        <p>CSS can be defined externally, internally, or inline. An HTML page can use multiple <span class="codeblock">&#60;style&#62;</span> elements, and a CSS file can use <span class="codeblock">@import url("")</span> to include CSS from another file.</p>
         <ul>
             <li><p>
                 <strong>External: </strong>Include the following in the <span class="codeblock">&#60;head&#62;</span> section:<br />
@@ -77,7 +77,7 @@
 
     <!-- ALL PROPERTIES -->
     <div>
-        <table id="allproperties">
+        <table id="allproperties" class ="codetable">
             <thead>
                 <tr>
                     <td><h2>Property</h2></td>
@@ -398,6 +398,150 @@
                         </ul>
                     </td>
                     <td>Whether adjacent table borders should be merged or stay seperate</td>
+                </tr>
+                <tr>
+                    <td><p>position</p></td>
+                    <td>
+                        <ul>
+                            <li><p>static</p></li>
+                            <li><p>relative</p></li>
+                            <li><p>absolute</p></li>
+                            <li><p>fixed</p></li>
+                        </ul>
+                    </td>
+                    <td>Sets how the box's location is chosen. Static is the standard. Relative is relative to static. Then use top, bottom, left, and right properties.
+                        Absolute "removes" it from normal flow. Fixed "removes" it from flow and prevents scrolling behavior</td>
+                </tr>
+                <tr>
+                    <td><p>float</p></td>
+                    <td>
+                        <ul>
+                            <li><p>left</p></li>
+                            <li><p>right</p></li>
+                        </ul>
+                    </td>
+                    <td>Instead of going on a new line, this element will go to the start or end of the parent box, and other elements will flow around it.
+                        If a block contains only floated elements, borders may not work unless you set overflow to auto and width to 100%
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>z-index</p></td>
+                    <td>
+                        <ul>
+                            <li><p>1</p></li>
+                            <li><p>15</p></li>
+                        </ul>
+                    </td>
+                    <td>When two elements overlap, the last-defined element or the one with the highest z-index is on top</td>
+                </tr>
+                <tr>
+                    <td><p>clear</p></td>
+                    <td>
+                        <ul>
+                            <li><p>left</p></li>
+                            <li><p>right</p></li>
+                            <li><p>both</p></li>
+                            <li><p>none</p></li>
+                        </ul>
+                    </td>
+                    <td>Prevents other elements from touching the stated side. Useful for floated boxes</td>
+                </tr>
+                <tr>
+                    <td><p>background-image</p></td>
+                    <td>
+                        <ul>
+                            <li><p>url("")</p></li>
+                        </ul>
+                    </td>
+                    <td>Adds a background image to the element</td>
+                </tr>
+                <tr>
+                    <td><p>background-repeat</p></td>
+                    <td>
+                        <ul>
+                            <li><p>repeat</p></li>
+                            <li><p>repeat-x</p></li>
+                            <li><p>repeat-y</p></li>
+                            <li><p>no-repeat</p></li>
+                        </ul>
+                    </td>
+                    <td>Decides whether the background image should repeat and how</td>
+                </tr>
+                <tr>
+                    <td><p>background-position</p></td>
+                    <td>
+                        <ul>
+                            <li><p>center top</p></li>
+                            <li><p>center</p></li>
+                        </ul>
+                    </td>
+                    <td>How the background image should be placed within the element</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1>HTML5 Layout Tags:</h1>
+        <p>When using these elements, include the following CSS to ensure they render properly in old browsers: <span class="codeblock">header, section, footer, aside, nav, article, figure {display: block;}</span></p>
+        <table id = "html5elements" class="codetable">
+            <thead>
+                <tr>
+                    <td><h2>Tag</h2></td>
+                    <td><h2>Description</h2></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><p>article</p></td>
+                    <td>Defines an article: blog post, forum post, other independent content</td>
+                </tr>
+                <tr>
+                    <td><p>aside</p></td>
+                    <td>Defines content adjacent to the page but not directly. Related links, recent posts, etc</td>
+                </tr>
+                <tr>
+                    <td><p>details</p></td>
+                    <td>Defines additional info which can be shown or hidden</td>
+                </tr>
+
+                <tr>
+                    <td><p>summary</p></td>
+                    <td>Defines a heading for a details element</td>
+                </tr>
+                <tr>
+                    <td><p>figure</p></td>
+                    <td>Defines a self-contained image, codeblock, etc</td>
+                </tr>
+                <tr>
+                    <td><p>figcaption</p></td>
+                    <td>Defines a caption association with a figure</td>
+                </tr>
+                <tr>
+                    <td><p>header</p></td>
+                    <td>Defines a page header</td>
+                </tr>
+                <tr>
+                    <td><p>footer</p></td>
+                    <td>Defines a page footer</td>
+                </tr>
+                <tr>
+                    <td><p>main</p></td>
+                    <td>Defines the main page content</td>
+                </tr>
+                <tr>
+                    <td><p>mark</p></td>
+                    <td>Defines highlighted/marked text</td>
+                </tr>
+                <tr>
+                    <td><p>nav</p></td>
+                    <td>Defines a nav section</td>
+                </tr>
+                <tr>
+                    <td><p>section</p></td>
+                    <td>Define an indepented piece of content within the page</td>
+                </tr>
+
+                <tr>
+                    <td><p>time</p></td>
+                    <td>Defines a clock or calendar</td>
                 </tr>
             </tbody>
         </table>
