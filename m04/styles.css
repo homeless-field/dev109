@@ -1,0 +1,36 @@
+body {
+    background-image: url(./images/floral_pattern.jpg);
+}
+
+#header h1 {
+    font-family: 'ClickuperRegular', serif;
+    font-weight: bold;
+}
+
+#nav {
+    background-color: #9BA359;
+}
+
+#feature {
+    background-color: #7b5a87;
+    background-image: url("./images/flower.png");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.column1 {
+    background-color: #F79595;
+}
+
+.column2 {
+    background-color: #FBE7BC;
+}
+
+.column3 {
+    background-color: #F3B7A0;
+}
+
+#footer {
+    background-color: #C0C596;
+}
