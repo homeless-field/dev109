@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>CSS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/dev109/toolshed/class-notes/universal_styles.css" type="text/css">
+</head>
+
+<body>
+    <header>
+        <a href="/dev109/toolshed/class-notes/html/"><p>HTML</p></a>
+        <a href="/dev109/toolshed/class-notes/html/all-tags/"><p>All HTML5 Tags</p>
+        <a href="/dev109/toolshed/class-notes/css/"><p>CSS</p>
+        <a href="/dev109/toolshed/class-notes/css/all-properties/"><p>All CSS Properties</p></a>
+    </header>
+
+    <main>
+        <h1>CSS</h1>
+        <section id="divs">
+            <p>Anything can go in a div, <span id="span">but only inline elements go in a span.</span> IDs are unique, and each element can only have one. Classes are non-unique, and elements can have infinitely many.</p>
+        </section>
+
+        <!-- PARTS -->
+        <section id="css">
+            <p>CSS has two parts:</p>
+            <ul>
+                <li>
+                    <p><strong>Selector: </strong>Which element types should be affected</p>
+                    <ul>
+                        <li><p><strong>Universal: Applies to all elements in the entire document</strong><br><span class="codeblock">* {}</span></p></li>
+                        <li><p><strong>Type: Applies to the specified type</strong><br><span class="codeblock">h1, h2 {}</span></p></li>
+                        <li><p><strong>Class: Applies to the specified class</strong><br><span class="codeblock">.menu {}</span>, <span class="codeblock">p.menu {}</span></p></li>
+                        <li><p><strong>ID: Applies to the specified ID</strong><br><span class="codeblock">#titlebar</span></p></li>
+                        <li><p><strong>Child: Applies to specified children of specifed elements</strong><br><span class="codeblock">li > a {}</span></p></li>
+                        <li><p><strong>Descendant: Applies to all specified descendants of specified elements</strong><br><span class="codeblock">li a {}</span></p></li>
+                        <li><p><strong>Adjacent Sibling: Applies to the next specified element after specifed element, if they're siblings</strong><br><span class="codeblock">h1+p {}</span></p></li>
+                        <li><p><strong>General Sibling: Applies to all specified elements after specified element, if they're siblings</strong><br><span class="codeblock">h1~p {}</span></p></li>
+                    </ul>
+                </li>
+                <li>
+                    <p><strong>Declaration: </strong> How the elements should be styled</p>
+                    <ul>
+                        <li><p><strong>Properties: </strong> Which aspects of the element to style</p></li>
+                        <li><p><strong>Values: </strong> How to style those aspects</p></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!-- SOME MORE EXPLANATION -->
+        <section>
+            <p>
+                Pseudo-elements can be added to the end of a selector and will only affect it if it applies.<br>
+                <span class="codeblock">p:first-letter</span><br>
+                <span class="codeblock">p:first-line</span><br>
+                <span class="codeblock">a:link</span> (unclicked)<br>
+                <span class="codeblock">a:visited</span> (click)<br>
+                <span class="codeblock">p:hover</span><br>
+                <span class="codeblock">p:active</span> (actively clicked into)<br>
+                <span class="codeblock">input:focus</span> (actively being interacted with)
+            </p>
+            <p>
+                There is also <span class="codeblock">@font-face</span> which can be used at the same level as a selector to install a new font to the user's machine:<br>
+                <span class="codeblock">@font-face {</span><br>
+                <span class="codeblock">font-family: "ChuckFiveRegular"</span><br>
+                <span class="codeblock">source: url('...')</span>
+            </p>
+
+            <p>CSS can be defined externally, internally, or inline. An HTML page can use multiple <span class="codeblock">&#60;style&#62;</span> elements, and a CSS file can use <span class="codeblock">@import url("")</span> to include CSS from another file.</p>
+            <ul>
+                <li><p>
+                    <strong>External: </strong>Include the following in the <span class="codeblock">&#60;head&#62;</span> section:<br />
+                    <span class="codeblock">&#60;link rel="stylesheet" href="styles.css" type="text/css"&#62;</span>
+                </p></li>
+                <li><p>
+                    <strong>Internal: </strong>Include the following in the <span class="codeblock">&#60;head&#62;</span> section:<br />
+                    <span class="codeblock">&#60;style type="text/css"&#62; h1 {color:red;}  p {color:blue;}&#60;/style&#62;</span>
+                </p></li>
+                <li><p>
+                    <strong>Inline: </strong>Include the following directly surrounding the element:<br />
+                    <span class="codeblock">&#60;p style="color:blue"&#62;  THIS IS AN INLINE STYLE IN BLUE &#60;/p&#62;</span>
+                </p></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

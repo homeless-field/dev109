@@ -2,82 +2,23 @@
 <html lang="en">
 
 <head>
-    <title>CSS</title>
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <title>All CSS Properties</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/dev109/toolshed/class-notes/universal_styles.css" type="text/css">
+    <link rel="stylesheet" href="/dev109/toolshed/class-notes/codetable.css" type="text/css">
 </head>
 
 <body>
-    <h1>CSS</h1>
-    <div id="divs" class="divbasic">
-        <p>Anything can go in a div, <span id="span">but only inline elements go in a span.</span> IDs are unique, and each element can only have one. Classes are non-unique, and elements can have infinitely many.</p>
-    </div>
+    <header>
+        <a href="/dev109/toolshed/class-notes/html/"><p>HTML</p></a>
+        <a href="/dev109/toolshed/class-notes/html/all-tags/"><p>All HTML5 Tags</p>
+        <a href="/dev109/toolshed/class-notes/css/"><p>CSS</p>
+        <a href="/dev109/toolshed/class-notes/css/all-properties/"><p>All CSS Properties</p></a>
+    </header>
 
-    <!-- PARTS -->
-    <div id="css" class="divbasic">
-        <p>CSS has two parts:</p>
-        <ul>
-            <li>
-                <p><strong>Selector: </strong>Which element types should be affected</p>
-                <ul>
-                    <li><p><strong>Universal: Applies to all elements in the entire document</strong><br><span class="codeblock">* {}</span></p></li>
-                    <li><p><strong>Type: Applies to the specified type</strong><br><span class="codeblock">h1, h2 {}</span></p></li>
-                    <li><p><strong>Class: Applies to the specified class</strong><br><span class="codeblock">.menu {}</span>, <span class="codeblock">p.menu {}</span></p></li>
-                    <li><p><strong>ID: Applies to the specified ID</strong><br><span class="codeblock">#titlebar</span></p></li>
-                    <li><p><strong>Child: Applies to specified children of specifed elements</strong><br><span class="codeblock">li > a {}</span></p></li>
-                    <li><p><strong>Descendant: Applies to all specified descendants of specified elements</strong><br><span class="codeblock">li a {}</span></p></li>
-                    <li><p><strong>Adjacent Sibling: Applies to the next specified element after specifed element, if they're siblings</strong><br><span class="codeblock">h1+p {}</span></p></li>
-                    <li><p><strong>General Sibling: Applies to all specified elements after specified element, if they're siblings</strong><br><span class="codeblock">h1~p {}</span></p></li>
-                </ul>
-            </li>
-            <li>
-                <p><strong>Declaration: </strong> How the elements should be styled</p>
-                <ul>
-                    <li><p><strong>Properties: </strong> Which aspects of the element to style</p></li>
-                    <li><p><strong>Values: </strong> How to style those aspects</p></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-
-    <!-- SOME MORE EXPLANATION -->
-    <div class="divbasic">
-        <p>
-            Pseudo-elements can be added to the end of a selector and will only affect it if it applies.<br>
-            <span class="codeblock">p:first-letter</span><br>
-            <span class="codeblock">p:first-line</span><br>
-            <span class="codeblock">a:link</span> (unclicked)<br>
-            <span class="codeblock">a:visited</span> (click)<br>
-            <span class="codeblock">p:hover</span><br>
-            <span class="codeblock">p:active</span> (actively clicked into)<br>
-            <span class="codeblock">input:focus</span> (actively being interacted with)
-        </p>
-        <p>
-            There is also <span class="codeblock">@font-face</span> which can be used at the same level as a selector to install a new font to the user's machine:<br>
-            <span class="codeblock">@font-face {</span><br>
-            <span class="codeblock">font-family: "ChuckFiveRegular"</span><br>
-            <span class="codeblock">source: url('...')</span>
-        </p>
-
-        <p>CSS can be defined externally, internally, or inline. An HTML page can use multiple <span class="codeblock">&#60;style&#62;</span> elements, and a CSS file can use <span class="codeblock">@import url("")</span> to include CSS from another file.</p>
-        <ul>
-            <li><p>
-                <strong>External: </strong>Include the following in the <span class="codeblock">&#60;head&#62;</span> section:<br />
-                <span class="codeblock">&#60;link rel="stylesheet" href="styles.css" type="text/css"&#62;</span>
-            </p></li>
-            <li><p>
-                <strong>Internal: </strong>Include the following in the <span class="codeblock">&#60;head&#62;</span> section:<br />
-                <span class="codeblock">&#60;style type="text/css"&#62; h1 {color:red;}  p {color:blue;}&#60;/style&#62;</span>
-            </p></li>
-            <li><p>
-                <strong>Inline: </strong>Include the following directly surrounding the element:<br />
-                <span class="codeblock">&#60;p style="color:blue"&#62;  THIS IS AN INLINE STYLE IN BLUE &#60;/p&#62;</span>
-            </p></li>
-        </ul>
-    </div>
-
-    <!-- ALL PROPERTIES -->
-    <div>
-        <table id="allproperties" class ="codetable">
+    <main>
+        <table class="codetable">
             <thead>
                 <tr>
                     <td><h2>Property</h2></td>
@@ -479,72 +420,6 @@
                 </tr>
             </tbody>
         </table>
-        <h1>HTML5 Layout Tags:</h1>
-        <p>When using these elements, include the following CSS to ensure they render properly in old browsers: <span class="codeblock">header, section, footer, aside, nav, article, figure {display: block;}</span></p>
-        <table id = "html5elements" class="codetable">
-            <thead>
-                <tr>
-                    <td><h2>Tag</h2></td>
-                    <td><h2>Description</h2></td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><p>article</p></td>
-                    <td>Defines an article: blog post, forum post, other independent content</td>
-                </tr>
-                <tr>
-                    <td><p>aside</p></td>
-                    <td>Defines content adjacent to the page but not directly. Related links, recent posts, etc</td>
-                </tr>
-                <tr>
-                    <td><p>details</p></td>
-                    <td>Defines additional info which can be shown or hidden</td>
-                </tr>
-
-                <tr>
-                    <td><p>summary</p></td>
-                    <td>Defines a heading for a details element</td>
-                </tr>
-                <tr>
-                    <td><p>figure</p></td>
-                    <td>Defines a self-contained image, codeblock, etc</td>
-                </tr>
-                <tr>
-                    <td><p>figcaption</p></td>
-                    <td>Defines a caption association with a figure</td>
-                </tr>
-                <tr>
-                    <td><p>header</p></td>
-                    <td>Defines a page header</td>
-                </tr>
-                <tr>
-                    <td><p>footer</p></td>
-                    <td>Defines a page footer</td>
-                </tr>
-                <tr>
-                    <td><p>main</p></td>
-                    <td>Defines the main page content</td>
-                </tr>
-                <tr>
-                    <td><p>mark</p></td>
-                    <td>Defines highlighted/marked text</td>
-                </tr>
-                <tr>
-                    <td><p>nav</p></td>
-                    <td>Defines a nav section</td>
-                </tr>
-                <tr>
-                    <td><p>section</p></td>
-                    <td>Define an indepented piece of content within the page</td>
-                </tr>
-
-                <tr>
-                    <td><p>time</p></td>
-                    <td>Defines a clock or calendar</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    </main>
 </body>
 </html>
