@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <title>Text</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    <h1>Ashton Gibson - Rhombus</h1>
+
+    <!-- HTML inputs for rhombus -->
+    <section id="rhombusInput">
+        <label class="interactable">
+            Rhombus Quadrant Height:
+            <input type="text" id="height" value="5">
+        </label><br>
+        <label class="interactable">
+            Even Position Color: 
+            <select id="evenColor">
+                <option value="#FF0000">Red</option>
+                <option value="#00FF00">Green</option>
+                <option value="#0000FF">Blue</option>
+            </select>
+        </label><br>
+        <label class="interactable">
+            Odd Position Color: 
+            <select id="oddColor">
+                <option value="#FF0000">Red</option>
+                <option value="#00FF00">Green</option>
+                <option value="#0000FF">Blue</option>
+            </select>
+        </label><br>
+        <label class="interactable">
+            Rhombus Symbol: 
+            <select id="symbol">
+                <option value="*">*</option>
+                <option value="$">$</option>
+                <option value="@">@</option>
+            </select>
+        </label><br>
+
+        <button onclick="createRhombus(
+            document.getElementById('height').value, 
+            document.getElementById('evenColor').value, 
+            document.getElementById('oddColor').value,
+            document.getElementById('symbol').value);">
+            Display Rhombus</button>
+        </section>
+
+        <section id="rhombus">
+            
+        </section>
+
+        <script src="script.js"></script>
+</body>
